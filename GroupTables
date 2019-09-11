@@ -33,3 +33,8 @@ VALUES ('11','Group 2','CSD1170','4');
 
 INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
 VALUES ('12','Group 2','CSD1022','4');
+
+
+select students.studentid, groups.classid
+from students, groups
+where students.programgroup = groups.programgroup
