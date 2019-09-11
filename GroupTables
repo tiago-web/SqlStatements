@@ -1,0 +1,35 @@
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('1','Group 1','CSD2354','9');
+
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('2','Group 1','CSD2206','9');
+
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('3','Group 1','CSD2058','9');
+
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('4','Group 1','CSD1910','9');
+
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('5','Group 1','CSD1762','9');
+
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('6','Group 1','CSD1614','9');
+
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('7','Group 2','CSD1113','4');
+
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('8','Group 2','CSD1466','4');
+
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('9','Group 2','CSD1318','4');
+
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('10','Group 2','CSD1114','4');
+
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('11','Group 2','CSD1170','4');
+
+INSERT INTO groups (programgroupid, programgroup, classid, sectionid)
+VALUES ('12','Group 2','CSD1022','4');
