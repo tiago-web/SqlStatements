@@ -1,31 +1,31 @@
-INSERT INTO students (studentid, studentlastname, studentfirstname)
-VALUES ('1','Reis','Tiago');
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroup)
+VALUES ('A01','Reis','Tiago','Group 1');
 
-INSERT INTO students (studentid, studentlastname, studentfirstname)
-VALUES ('2','Oliveira','Renata');
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroup)
+VALUES ('A02','Oliveira','Renata','Group 4');
 
-INSERT INTO students (studentid, studentlastname, studentfirstname)
-VALUES ('3','Silva','Sthephany');
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroup)
+VALUES ('A03','Silva','Sthephany','Group 4');
 
-INSERT INTO students (studentid, studentlastname, studentfirstname)
-VALUES ('4','Soriano','Roberto');
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroup)
+VALUES ('A04','Soriano','Roberto','Group 2');
 
-INSERT INTO students (studentid, studentlastname, studentfirstname)
-VALUES ('5','Soriano','Renato');
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroup)
+VALUES ('A05','Jones','Renato','Group 2');
 
-INSERT INTO students (studentid, studentlastname, studentfirstname)
-VALUES ('6','Soriano','Oswaldo');
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroup)
+VALUES ('A06','Smith','Oswaldo','Group 1');
 
-INSERT INTO students (studentid, studentlastname, studentfirstname)
-VALUES ('7','Soriano','Rodrigo');
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroup)
+VALUES ('A07','Scott','Rodrigo','Group 3');
 
-INSERT INTO students (studentid, studentlastname, studentfirstname)
-VALUES ('8','-','Geraldo');
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroup)
+VALUES ('A08','-','Geraldo','Group 4');
 
-INSERT INTO students (studentid, studentlastname, studentfirstname)
-VALUES ('9','Nogueira','Diogo');
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroup)
+VALUES ('A09','Nogueira','Diogo','Group 3');
 
-INSERT INTO students (studentid, studentlastname, studentfirstname)
-VALUES ('10','Rodrigues','Diego');
+INSERT INTO students (studentid, studentlastname, studentfirstname, programgroup)
+VALUES ('A10','Rodrigues','Diego','Group 3');
 
 select * from students;
