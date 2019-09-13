@@ -38,3 +38,13 @@ VALUES ('12','Group 2','CSD1022','4');
 select students.studentid, groups.classid
 from students, groups
 where students.programgroup = groups.programgroup
+
+
+CREATE TABLE students(
+studentid VARCHAR (20) NOT NULL,
+studentlastname VARCHAR (20) NOT NULL,
+studentfirstname VARCHAR (20) NOT NULL,
+programgroupname VARCHAR (20) NOT NULL,
+term VARCHAR (20) NOT NULL
+PRIMARY KEY (studentid)
+) ;
