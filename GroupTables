@@ -48,3 +48,7 @@ programgroupname VARCHAR (20) NOT NULL,
 term VARCHAR (20) NOT NULL
 PRIMARY KEY (studentid)
 ) ;
+
+select * from students,programgroup
+where students.programgroupname = programgroup.programgroupname
+
