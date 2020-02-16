@@ -1,0 +1,100 @@
+use AdventureWorks2012
+select * from dbo.data
+where solddate between '8/1/2019' and '8/15/2019'
+order by solddate;
+
+use AdventureWorks2012
+select count(*) from dbo.data
+where solddate between '8/16/2019' and '8/30/2019';
+
+use AdventureWorks2012
+select count(*) from dbo.data
+where solddate < '8/16/2019';
+
+use AdventureWorks2012
+select * from dbo.data
+where day(solddate) between '1' and '2';
+
+use AdventureWorks2012
+select Type, description, avg([Sold Price]) from data
+group by Type, description
+order by avg([Sold Price]) desc;
+
+use AdventureWorks2012
+select Type, description, avg([Sold Price]), avg(bedroom) Bedroom from data
+where solddate > '8/15/2019'
+group by Type, description
+order by avg([Sold Price]) desc;
+
+use AdventureWorks2012
+select Type, description, avg([Sold Price]), avg(bedroom) Bedroom from data
+where solddate < '8/15/2019'
+group by Type, description
+order by avg([Sold Price]) desc;
+
+use AdventureWorks2012
+select count(type), description, avg([Sold Price]), avg(bedroom) Bedroom from data
+where solddate between '8/15/2019' and '8/30/2019'
+group by type, description
+order by avg([Sold Price]) desc;
+
+select left(StreetName ,1) as StreetLetter from data;
+
+select * from data
+where left(StreetName ,1) = 'A';
+
+select left(StreetName ,1) as Initial, count (*) as CountOfNinitial
+from data
+group by left(streetname, 1);
+
+
+select * from data
+where month(solddate) >= 8
+order by SoldDate desc;
+
+-- SHOW ONLY MONTH of AUGUST
+select * from data
+where month(solddate) = 8
+order by SoldDate desc;
+
+-- average selling price per type of house
+select type, avg([Sold Price]) as SoldPriceAverage from data
+where month(SoldDate) = 8
+group by type
+order by avg([Sold Price]) desc;
+
+-- Create view as EmoloyeeProfile. Report on EmployeeNumber, First and Last name, Date of birth and DepartmentHead. LIMIT to birthdays in first half of the year before 1980
+create view EmployeeProfile as
+select e.EmployeeNumber, e.EmployeeFirstName, e.EmployeeLastName, e.DateOfBirth, d.DepartmentHead
+from dbo.tblEmployee as e, dbo.tblDepartment as d
+where e.Department = d.Department;
+
+select * from EmployeeProfile
+where month(DateOfBirth) < 7 and year(DateOfBirth) < 1980;
+
+-- drop view and create it again
+
+drop view EmployeeProfile;
+
+create view EmployeeProfile as
+select * from dbo.tblEmployee as e
+where e.EmployeeLastName > 'M';
+
+
+-- This statement finds all the Employee last name that contains the letter o in the middle of it
+select * from EmployeeProfile
+where EmployeeLastName like '%o%'
+order by EmployeeLastName;
+
+-- Create a view as WiningEmployees.
+create view WinningEmployees as
+select * from EmployeeProfile
+where EmployeeFirstName in ('Jane', 'Rob');
+
+select * from WinningEmployees;
+
+select e.EmployeeNumber, e.EmployeeFirstName, e.EmployeeLastName, e.DateOfBirth, d.DepartmentHead
+from dbo.tblEmployee as e, dbo.tblDepartment as d
+where e.Department = d.Department and
+month(DateOfBirth) in (1,2,3) 
+and year(DateOfBirth) > 1970;
